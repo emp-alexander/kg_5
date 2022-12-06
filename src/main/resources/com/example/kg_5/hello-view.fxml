@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kg_5.HelloController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openImage" text="Open…" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <ImageView fx:id="image" fitHeight="583.0" fitWidth="869.0" layoutX="20.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+
+                </ImageView>
+                <Button layoutX="1001.0" layoutY="501.0" mnemonicParsing="false" onMouseClicked="#lightMinus" text="Понизить яркость" />
+                <Button layoutX="1001.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#lightPlus" text="Повысить яркость" />
+                <Button layoutX="1380.0" layoutY="501.0" mnemonicParsing="false" onMouseClicked="#contrMinus" text="Понизить контрастность" />
+                <Button layoutX="1379.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#contrPlus" text="Повысить контрастность" />
+                <Button layoutX="1206.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#blackWhite" text="Черно-белое" />
+<!--                <Button layoutX="1199.0" layoutY="501.0" mnemonicParsing="false" onMouseClicked="#grey" text="Оттенки серого" />-->
+                <Button layoutX="1221.0" layoutY="553.0" mnemonicParsing="false" onMouseClicked="#negativeClick" text="Негатив" />
+                <BarChart fx:id="barChart1" layoutX="880.0" prefHeight="362.0" prefWidth="665.0" title="Гистограмма">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </BarChart>
+<!--            <Button fx:id="reserButton" layoutX="1024.0" layoutY="553.0" mnemonicParsing="false" onAction="#reset" text="Button" />-->
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
